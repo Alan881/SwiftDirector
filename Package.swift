@@ -28,7 +28,7 @@ fileprivate extension Target {
             name: "CLDAP",
             path: "Sources/CLDAPMac",
             cSettings: [
-                .headerSearchPath("\(openldapPath)/include", .when(platforms: [.iOS, .tvOS, .watchOS, .macOS])),
+                //.headerSearchPath("\(openldapPath)/include", .when(platforms: [.iOS, .tvOS, .watchOS, .macOS])),
                 //.unsafeFlags(["-I\(openldapPath)/include"], .when(platforms: [.iOS, .tvOS, .watchOS, .macOS])),
             ],
             linkerSettings: [
