@@ -15,11 +15,11 @@ fileprivate extension Target {
                 .brew(["openldap"]),
             ])
 #else
-#if arch(arm64) || arch(arm)
-        let openldapPath = "/opt/homebrew/opt/openldap"
-#else
+//#if arch(arm64) || arch(arm)
+        //let openldapPath = "/opt/homebrew/opt/openldap"
+//#else
         let openldapPath = "/usr/local/opt/openldap"
-#endif
+//#endif
         var isDir: ObjCBool = false
         if !FileManager.default.fileExists(atPath: openldapPath, isDirectory: &isDir) || !isDir.boolValue {
             print("'\(openldapPath)' is missing! Builds will most likely fail. Please install 'openldap' with e.g. 'brew install openldap'")
